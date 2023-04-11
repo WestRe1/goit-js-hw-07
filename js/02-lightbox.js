@@ -19,23 +19,8 @@ const gallery = document.querySelector('.gallery');
     gallery.insertAdjacentHTML('beforeend', marcup)
 })();
 
-gallery.addEventListener('click', onClick);
-
-function onClick(evt) {
-  evt.preventDefault();
-
-if (!evt.target.classList.contains('js-target')) {
-        return;
-    } 
-
-
 let galleryLightBox = new SimpleLightbox('.gallery a', {
-    captions: true,
-    captionSelector: 'img',
-    captionType: 'attr',
-    captionPosition: 'bottom',
     captionData: 'alt',
     captionDelay: 250,
 });
 
-}
